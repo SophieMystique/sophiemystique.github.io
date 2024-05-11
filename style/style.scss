@@ -1,0 +1,196 @@
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  transition: all 0.2s;
+  list-style: none;
+  text-decoration: none;
+}
+
+// Typography
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../typography/Pacifico/Pacifico-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../typography/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../typography/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+// Colors
+$bg-color: #131111;
+$primary-color: #c8f7e5;
+$font-color: #ececec;
+
+// Utilities
+.important-text {
+  color: $primary-color;
+}
+.bold {
+  font-weight: 600;
+}
+.underline {
+  text-decoration: underline;
+}
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    box-shadow: 0 0 10px 1px $primary-color;
+  }
+}
+.styled-text {
+  font-family: "Pacifico";
+}
+.body-container {
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+// Fade In Transition
+.section {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+  margin-bottom: 2rem;
+
+  &.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body {
+  background-color: $bg-color;
+  color: $font-color;
+  font-family: "Poppins";
+}
+h1 {
+  font-family: "Pacifico";
+}
+p {
+  margin-bottom: 1rem;
+}
+
+.bg-image {
+  filter: blur(15px);
+  opacity: 0.7;
+  width: 100%;
+  position: relative;
+  top: 0px;
+}
+.profile-image-name {
+  position: absolute;
+  top: 15%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+.profile-image {
+  width: 270px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px 1px $bg-color;
+}
+
+.bio-nav-section {
+  display: flex;
+  flex-direction: column;
+}
+.bio-section {
+  h1 {
+    font-family: "Pacifico";
+    margin-bottom: 1rem;
+  }
+}
+.nav-section {
+  display: block;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    margin-bottom: 1rem;
+    background-color: $primary-color;
+    color: $bg-color;
+  }
+}
+
+// Desktop View
+@media screen and (min-width: 700px) {
+  .hero {
+    .profile-image {
+      width: 350px;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  .bio-nav-section {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .bio-section {
+    width: 50%;
+  }
+  .nav-section {
+    width: 50%;
+  }
+}
+
+// Fixing the absolute position issue for all displays
+.bio-nav-section {
+  margin-top: 13rem;
+}
+@media screen and (min-width: 400px) {
+  .bio-nav-section {
+    margin-top: 10rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  .bio-nav-section {
+    margin-top: 7rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .bio-nav-section {
+    margin-top: 3rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .hero {
+    .profile-image {
+      width: 400px;
+    }
+    .profile-image-name {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+// Imports
+@import "./sample-songs";
+@import "./contact-page";
