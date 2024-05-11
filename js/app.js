@@ -19,17 +19,44 @@ sections.forEach((section) => {
 });
 
 // Fetching the DB
-fetch("data.json")
+fetch(
+  "https://raw.githubusercontent.com/CesarSullen/sophiemystique/main/js/data.json"
+)
   .then((response) => response.json())
   .then((data) => {
-    const list = document.getElementById("data-list");
+    const popList = document.getElementById("pop-music-list");
+    const rnbList = document.getElementById("r&b-music-list");
 
     data.forEach((item) => {
-      const li = document.createElement("li");
+      if (item.genre === "pop") {
+        const li = document.createElement("li");
+        const span = document.createElement("span");
+        span.classList.add("important-text", "styled-text");
+        span.textContent = `${item.index}`;
 
-      li.textContent = `${item.title}`;
+        li.appendChild(span);
+        li.appendChild(
+          document.createTextNode(`. ${item.title} - ${item.artist}`)
+        );
 
-      list.appendChild(li);
+        popList.appendChild(li);
+      }
+    });
+
+    data.forEach((item) => {
+      if (item.genre === "R&B") {
+        const li = document.createElement("li");
+        const span = document.createElement("span");
+        span.classList.add("important-text", "styled-text");
+        span.textContent = `${item.index}`;
+
+        li.appendChild(span);
+        li.appendChild(
+          document.createTextNode(`. ${item.title} - ${item.artist}`)
+        );
+
+        rnbList.appendChild(li);
+      }
     });
   })
   .catch((error) => {

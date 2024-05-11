@@ -49,6 +49,9 @@ $font-color: #ececec;
   font-weight: bold;
   cursor: pointer;
   width: 100%;
+  max-width: 400px;
+  background-color: $primary-color;
+  color: $bg-color;
 
   &:hover {
     box-shadow: 0 0 10px 1px $primary-color;
@@ -132,8 +135,6 @@ p {
 
   .btn {
     margin-bottom: 1rem;
-    background-color: $primary-color;
-    color: $bg-color;
   }
 }
 
@@ -192,5 +193,5 @@ p {
 }
 
 // Imports
-@import "./sample-songs";
+@import "./repertoire";
 @import "./contact-page";

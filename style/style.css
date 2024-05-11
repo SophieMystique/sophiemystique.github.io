@@ -42,6 +42,9 @@
   font-weight: bold;
   cursor: pointer;
   width: 100%;
+  max-width: 400px;
+  background-color: #c8f7e5;
+  color: #131111;
 }
 .btn:hover {
   box-shadow: 0 0 10px 1px #c8f7e5;
@@ -126,8 +129,6 @@ p {
 }
 .nav-section .btn {
   margin-bottom: 1rem;
-  background-color: #c8f7e5;
-  color: #131111;
 }
 
 @media screen and (min-width: 700px) {
@@ -175,9 +176,25 @@ p {
     font-size: 3rem;
   }
 }
-/* .sample-songs{
+.repertoire-songs h1 {
+  margin-bottom: 2rem;
+}
+.repertoire-songs .repertoire-lists-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.repertoire-songs .btn {
+  margin: auto;
+}
 
-} */
+@media screen and (min-width: 700px) {
+  .repertoire-songs .repertoire-lists-container {
+    flex-direction: row;
+  }
+}
 .contact-page h1 {
   text-align: center;
   margin-bottom: 2rem;
@@ -195,13 +212,14 @@ p {
   align-items: center;
   gap: 20px;
   margin-bottom: 20px;
+  border: solid 2px #c8f7e5;
 }
 .contact-page .contact-card:hover {
   transform: scale(1.1);
+  border: dotted 2px #c8f7e5;
 }
 .contact-page .contact-card img {
   width: 4rem;
-  border-radius: 7.5px;
 }
 .contact-page .contact-card .title {
   font-size: 1.5rem;

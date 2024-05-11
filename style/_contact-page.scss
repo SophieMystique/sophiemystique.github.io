@@ -16,14 +16,15 @@
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
+    border: solid 2px $primary-color;
 
     &:hover {
       transform: scale(1.1);
+      border: dotted 2px $primary-color;
     }
 
     img {
       width: 4rem;
-      border-radius: 7.5px;
     }
 
     .title {
