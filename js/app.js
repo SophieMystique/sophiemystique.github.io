@@ -31,7 +31,7 @@ fetch(
       if (item.genre === "pop") {
         const li = document.createElement("li");
         const span = document.createElement("span");
-        span.classList.add("important-text", "styled-text");
+        span.classList.add("important-text", "styled-text-1");
         span.textContent = `${item.index}`;
 
         li.appendChild(span);
@@ -47,7 +47,7 @@ fetch(
       if (item.genre === "R&B") {
         const li = document.createElement("li");
         const span = document.createElement("span");
-        span.classList.add("important-text", "styled-text");
+        span.classList.add("important-text", "styled-text-2");
         span.textContent = `${item.index}`;
 
         li.appendChild(span);
